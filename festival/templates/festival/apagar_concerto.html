@@ -1,0 +1,10 @@
+{% extends 'festival/layout.html' %}
+{% block content %}
+<h2>Apagar Concerto</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim, apagar</button>
+    <a href="{% url 'concerto' concerto.id %}"></a>
+</form>
+{% endblock %}
